@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e6d9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6f4e37;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #8b5c42;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* New styles for sidebar */
+.main-content-wrapper {
+    display: flex; /* Enables flexbox for side-by-side layout */
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 250px; /* Adjust sidebar width as needed */
+    background-color: #e0d0c0; /* Lighter background for the sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px; /* Adjust photo size */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 20px;
+    border: 3px solid #6f4e37; /* Border around the profile photo */
+}
+
+.bio h3 {
+    color: #6f4e37;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.content {
+    flex-grow: 1; /* Allows the content to take up remaining space */
+    padding: 5px; /* Add padding to the main content area */
+}
+
+/* Existing styles */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu {
+    padding: 20px;
+}
+
+.menu h2 {
+    color: #6f4e37;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+#contact {
+    padding: 20px;
+}
+
+footer {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8b5c42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Gallery specific styles */
+.image-grid {
+    display: flex; /* Use flexbox for horizontal arrangement */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    gap: 15px; /* Space between images */
+    justify-content: center; /* Center the images horizontally */
+    padding: 20px;
+}
+
+.image-grid img {
+    width: 250px; /* Fixed width for consistency */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 8px; /* Slightly rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 100px; /* Added for better message input area */
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+  }
+  
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  .coffee-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px 0;
+    max-width: 600px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coffee-list li {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Pushes items to ends */
+    align-items: baseline; /* Align text baselines */
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0d0c0; /* Lighter separator line */
+}
+
+.coffee-list li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.coffee-list span {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.coffee-list span.price {
+    font-weight: bold;
+    color: #6f4e37; /* Price stands out */
+}

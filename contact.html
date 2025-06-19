@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles for the body to include a background image */
+    body {
+      background-image: url('b36934aeddb8bbbf812f040c47a6c38f.jpg'); /* Replace 'your-image-name.jpg' with your image file path */
+      background-size: cover; /* This makes the background image cover the entire element */
+      background-position: center; /* Centers the background image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-attachment: fixed; /* Makes the background image fixed when scrolling */
+      margin: 0; /* Remove default body margin */
+      height: 100vh; /* Ensure body takes full viewport height */
+      display: flex; /* Use flexbox to center content */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+    }
+
+    /* Add specific styles for the form-container if not already in style.css,
+       or override existing ones. This is here for clarity, but if they are
+       in style.css, you can remove them from here. */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center; /* Center content in the container */
+      /* Remove margin: 100px auto; if using flexbox for centering */
+    }
+
+    /* Styles for the verification message */
+    #verification-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Form</h2>
+    <form id="contactForm" action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="verification-message" style="display: none;"></div>
+  </div>
+
+  <script>
+    // Get the form element
+    const contactForm = document.getElementById('contactForm');
+    const verificationMessage = document.getElementById('verification-message');
+
+    // Add an event listener for form submission
+    contactForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior (page refresh)
+      event.preventDefault();
+
+      // Get form field values
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+
+      // Basic client-side validation
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        verificationMessage.style.display = 'block';
+        verificationMessage.style.color = 'red';
+        verificationMessage.textContent = 'Please fill in all fields.';
+        return; // Stop the function if validation fails
+      }
+
+      // Display "Verified" message
+      verificationMessage.style.display = 'block';
+      verificationMessage.style.color = 'green';
+      verificationMessage.textContent = 'submited!';
+
+      // Redirect to another page after a delay (e.g., 2 seconds)
+      setTimeout(function() {
+        window.location.href = 'success.html'; // Redirect to success.html
+      }, 2000); // 2000 milliseconds = 2 seconds
+    });
+  </script>
+
+</body>
+</html>

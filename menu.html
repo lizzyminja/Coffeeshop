@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Full Menu - My Coffee Shop</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* Add specific styles for the menu page layout here if needed */
+        .menu-page-content {
+            padding: 20px;
+            max-width: 960px; /* Constrain content width for readability */
+            margin: 20px auto; /* Center the content */
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h2 {
+            color: #6f4e37;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+            border-bottom: 2px solid #e0d0c0; /* Underline for category titles */
+            padding-bottom: 10px;
+        }
+
+        .menu-items-grid {
+            display: grid; /* Use CSS Grid for a clean, responsive layout */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexible columns */
+            gap: 30px; /* Space between items */
+        }
+
+        .menu-item-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensures image corners are rounded */
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        .menu-item-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistent image size */
+            object-fit: cover; /* Crop images to fit */
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-details {
+            padding: 15px;
+        }
+
+        .item-details h3 {
+            color: #8b5c42;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .item-details p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .item-details .price {
+            font-weight: bold;
+            color: #6f4e37;
+            font-size: 1.1em;
+        }
+
+        /* Basic responsive adjustments for very small screens */
+        @media (max-width: 600px) {
+            .menu-items-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Delicious Menu</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-page-content">
+        <section class="menu-category" id="coffee">
+            <h2>Coffee & Espresso</h2>
+            <div class="menu-items-grid">
+                <div class="menu-item-card">
+                    <img src="espresso.jpeg" alt="Espresso">
+                    <div class="item-details">
+                        <h3>Espresso</h3>
+                        <p>A concentrated coffee beverage brewed by forcing hot, pressurized water through finely ground coffee beans.</p>
+                        <span class="price">25000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="cappuccino.jpeg" alt="Cappuccino">
+                    <div class="item-details">
+                        <h3>Cappuccino</h3>
+                        <p>Equal parts espresso, steamed milk, and foamed milk, topped with a dusting of cocoa powder.</p>
+                        <span class="price">30000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="americano.jpeg" alt="Cappuccino">
+                    <div class="item-details">
+                            <h3>Americano</h3>
+                            <p>a coffee drink made with espresso and hot water</p>
+                            <span class="price">35000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="breve.jpeg" alt="Cappuccino">
+                    <div class="item-details">
+                        <h3>Breve</h3>
+                        <p>it uses steamed half-and-half (a mixture of half milk and half cream)</p>
+                        <span class="price">24000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="whipped.jpeg" alt="Cappuccino">
+                    <div class="item-details">
+                        <h3>Whipped</h3>
+                        <p>coffee preparation made from whipped, sweetened instant coffee beat into a thick foam</p>
+                        <span class="price">15000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="latte.jpeg" alt="Latte">
+                    <div class="item-details">
+                        <h3>Latte</h3>
+                        <p>A coffee drink made with espresso and steamed milk, often with a thin layer of foam on top.</p>
+                        <span class="price">40000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="mocha.jpeg" alt="Mocha">
+                    <div class="item-details">
+                        <h3>Mocha</h3>
+                        <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                        <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section class="menu-category" id="pastries">
+            <h2>Fresh Pastries</h2>
+            <div class="menu-items-grid">
+                <div class="menu-item-card">
+                    <img src="croissant.jpeg" alt="Croissant">
+                    <div class="item-details">
+                        <h3>Croissant</h3>
+                        <p>A buttery, flaky, viennoiserie pastry of Austrian origin, named for its crescent shape.</p>
+                        <span class="price">15000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="muffin.jpeg" alt="Blueberry Muffin">
+                    <div class="item-details">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Soft, sweet muffins bursting with juicy blueberries.</p>
+                        <span class="price">12000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread1.jpeg" alt="Mocha">
+                    <div class="item-details">
+                            <h3>Mocha</h3>
+                            <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                            <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread2.jpeg" alt="Mocha">
+                    <div class="item-details">
+                            <h3>Mocha</h3>
+                            <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                    <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread3.jpeg" alt="Mocha">
+                    <div class="item-details">
+                                    <h3>Mocha</h3>
+                                    <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                                    <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread4.jpeg" alt="Mocha">
+                    <div class="item-details">
+                                        <h3>Mocha</h3>
+                                        <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                                        <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread5.jpeg" alt="Mocha">
+                    <div class="item-details">
+                                            <h3>Mocha</h3>
+                                            <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                                            <span class="price">50000 Tsh</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <img src="bread6.jpeg" alt="Mocha">
+                    <div class="item-details">
+                                                <h3>Mocha</h3>
+                                                <p>A chocolate-flavored variant of a caffè latte. Often served with whipped cream.</p>
+                                                <span class="price">50000 Tsh</span>
+                    </div>
+            
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Coffee Shop</p>
+    </footer>
+
+</body>
+</html>
